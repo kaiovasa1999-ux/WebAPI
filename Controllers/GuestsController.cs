@@ -15,7 +15,7 @@ namespace WebApi.Project.Controllers
             new GuestModel() { Id = 1, FirstName="Lychezara",LastName = "Karnolska" },
             new GuestModel() { Id = 1, FirstName="Petar",LastName = "Petrov" },
         };
-        // GET: api/<GuestsController>
+
         [HttpGet]
         public IEnumerable<GuestModel> Get()
         {
@@ -34,7 +34,6 @@ namespace WebApi.Project.Controllers
             return Ok(res);
         }
 
-        // POST api/<GuestsController>
         [HttpPost]
         public void Post([FromBody] GuestModel value)
         {
@@ -50,14 +49,12 @@ namespace WebApi.Project.Controllers
             guests.Add(value);
         }
 
-        // PUT api/<GuestsController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] GuestModel value)
         {
             guests.Add(value);  
         }
 
-        // DELETE api/<GuestsController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
